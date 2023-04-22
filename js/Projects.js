@@ -7,7 +7,16 @@ var swiper = new Swiper(".mySwiper", {
   },
   pagination: {
     el: ".swiper-pagination",
-  },
-  mousewheel: true,
-  keyboard: true,
+  }
 });
+
+
+const guide = document.querySelector('.guide');
+const thumb = document.querySelectorAll('.thumb');
+
+
+thumb.forEach((t)=>{
+  t.addEventListener("mouseover",()=>{
+    guide.classList.add("hover");
+  })
+})
