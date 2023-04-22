@@ -1,0 +1,161 @@
+@import url(./common.css);
+$color-bg: #306d8c;
+$ticket-red: hsl(355, 63%, 59%);
+@keyframes start {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes blink2 {
+  45% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+  }
+}
+
+body {
+  overflow: hidden;
+}
+
+.intCon {
+  background-color: transparent;
+  margin-top: 100px;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-family: "Black Han Sans", sans-serif;
+  padding-top: 13%;
+  .intro1 {
+    position: absolute;
+    top: 0;
+    font-size: 4em;
+    width: 100%;
+    height: 18vh;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: transparent;
+    div {
+      position: absolute;
+      margin: 2vh 0;
+      opacity: 0;
+      top: 250px;
+      left: 10vw;
+      width: 80vw;
+      animation: switch 10s linear 1;
+      transform-origin: center;
+      color: white;
+      font-family: "Black Han Sans", sans-serif;
+      background-color: transparent;
+      z-index: 999;
+      span {
+        display: block;
+        font-size: 0.4em;
+        opacity: 0.8;
+        margin: 10px 0;
+      }
+    }
+  }
+
+  .intro2 {
+    width: auto;
+    height: auto;
+    position: relative;
+    margin: auto;
+    word-break: keep-all;
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    z-index: 1;
+    opacity: 0;
+    span {
+      background-color: white;
+      position: absolute;
+      top: 0;
+      right: -2px;
+      width: 2px;
+      height: 50px;
+      animation: blink 0.1s 0.2s 1 forwards;
+    }
+    &:nth-child(5) span {
+      animation: blink 1s 5 forwards;
+    }
+  }
+}
+
+.stop {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  width: 160px;
+  transform: translateX(-29%);
+  background-color: transparent;
+  border: none;
+  z-index: 999;
+  font-size: 18px;
+  font-family: "Black Han Sans", sans-serif;
+  color: rgb(150, 150, 150);
+  animation: blink3 2s 2s infinite;
+  opacity: 0;
+  &:active,
+  &:hover {
+    color: rgb(253, 175, 175);
+  }
+}
+
+@keyframes blink3 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes switch {
+  0% {
+    opacity: 0;
+    filter: blur(20px);
+    transform: scale(0.1);
+  }
+  3% {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(0.9);
+  }
+  10% {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+  13% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: scale(10);
+  }
+  60% {
+    opacity: 0;
+    filter: blur(30px);
+  }
+}
