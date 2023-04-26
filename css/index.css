@@ -65,6 +65,9 @@ body {
   background-color: transparent;
   z-index: 999;
 }
+.intCon .intro1 div:nth-child(2) {
+  animation-delay: 2s;
+}
 .intCon .intro1 div span {
   display: block;
   font-size: 0.4em;

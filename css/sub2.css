@@ -107,6 +107,7 @@
   width: 40px;
   height: 40px;
   margin: 0 10px;
+  transform: translateY(-40px);
 }
 .swiper .swiper-button-next::after,
 .swiper .swiper-button-prev::after {
@@ -378,11 +379,11 @@
 @media only screen and (max-width: 1200px) {
   .swiper .swiper-button-prev {
     left: 20px;
-    transform: translateY(-40px);
+    transform: translateY(-60px);
   }
   .swiper .swiper-button-next {
     right: 20px;
-    transform: translateY(-40px);
+    transform: translateY(-60px);
   }
   .swiper .swiper-slide {
     padding-top: 100px;
@@ -457,14 +458,14 @@
     transform: translateY(-233px) translateX(160px) scale(0.8);
   }
   .projectName {
-    transform: translateY(100px);
+    transform: translateY(60px);
   }
   .thumb {
     width: 710px;
     height: 350px;
     perspective: 1500px;
     position: relative;
-    transform: translateY(110px);
+    transform: translateY(80px);
   }
   .thumb .light {
     position: absolute;

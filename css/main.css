@@ -86,10 +86,11 @@ main li {
 }
 
 .poster {
+  cursor: pointer;
   width: 400px;
   height: 600px;
   position: absolute;
-  top: 15.5%;
+  top: 17%;
   transition: 0.5s;
   box-sizing: border-box;
   background-color: white;
@@ -179,10 +180,11 @@ main li {
     height: 45vw;
     min-width: 300px;
     min-height: 440px;
-    transform: translateY(40px);
+    transform: translateY(20px);
   }
   .p1 {
-    right: 7vw;
+    cursor: pointer;
+    right: 8vw;
   }
   .p1 img {
     width: 30vw;
@@ -192,13 +194,69 @@ main li {
     border: 1px solid rgb(226, 226, 226);
   }
   .p2 {
-    left: 7vw;
+    left: 8vw;
   }
   .p2 img {
+    cursor: pointer;
     width: 30vw;
     min-width: 290px;
     display: block;
     z-index: 1;
     border: 1px solid rgb(147, 147, 147);
+  }
+}
+@media only screen and (max-width: 768px) {
+  main .poster2ex,
+  main .posterex {
+    opacity: 0;
+    width: 50%;
+  }
+  main .bg1 .poster2ex {
+    right: 0;
+  }
+  main .bg2 .posterex {
+    left: 0;
+  }
+  main h2 {
+    font-size: 1.5rem;
+    transform: translateY(50px);
+  }
+  main li {
+    font-size: 1rem;
+  }
+  .poster {
+    width: 30vw;
+    height: 40vw;
+    min-width: 270px;
+    min-height: 400px;
+    transform: translateY(70px);
+  }
+  .p1 {
+    cursor: pointer;
+    right: 3vw;
+  }
+  .p1 img {
+    width: 30vw;
+    min-width: 240px;
+    display: block;
+    z-index: 1;
+    border: 1px solid rgb(226, 226, 226);
+  }
+  .p2 {
+    left: 3vw;
+  }
+  .p2 img {
+    cursor: pointer;
+    width: 30vw;
+    min-width: 260px;
+    display: block;
+    z-index: 1;
+    border: 1px solid rgb(147, 147, 147);
+  }
+  .clickguide p:nth-child(1) {
+    transform: translateX(-20px);
+  }
+  .clickguide p:nth-child(2) {
+    transform: translateX(20px);
   }
 }/*# sourceMappingURL=main.css.map */

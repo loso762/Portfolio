@@ -115,6 +115,7 @@ $ticket-red: hsl(355, 63%, 59%);
     width: 40px;
     height: 40px;
     margin: 0 10px;
+    transform: translateY(-40px);
     &::after {
       display: none;
     }
@@ -124,6 +125,7 @@ $ticket-red: hsl(355, 63%, 59%);
     background-size: contain;
     background-repeat: no-repeat;
     left: 50px;
+
     &:hover {
       background-image: url("../img/left_hover.png");
     }
@@ -391,11 +393,11 @@ $ticket-red: hsl(355, 63%, 59%);
   .swiper {
     .swiper-button-prev {
       left: 20px;
-      transform: translateY(-40px);
+      transform: translateY(-60px);
     }
     .swiper-button-next {
       right: 20px;
-      transform: translateY(-40px);
+      transform: translateY(-60px);
     }
 
     .swiper-slide {
@@ -486,7 +488,7 @@ $ticket-red: hsl(355, 63%, 59%);
   }
 
   .projectName {
-    transform: translateY(100px);
+    transform: translateY(60px);
   }
 
   .thumb {
@@ -494,7 +496,7 @@ $ticket-red: hsl(355, 63%, 59%);
     height: 350px;
     perspective: 1500px;
     position: relative;
-    transform: translateY(110px);
+    transform: translateY(80px);
 
     .light {
       position: absolute;

@@ -65,6 +65,9 @@ body {
       font-family: "Black Han Sans", sans-serif;
       background-color: transparent;
       z-index: 999;
+      &:nth-child(2) {
+        animation-delay: 2s;
+      }
       span {
         display: block;
         font-size: 0.4em;
