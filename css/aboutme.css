@@ -379,11 +379,11 @@ section.timlineInfo .timlineCon .Tline span:nth-child(5) {
     height: 80px;
     display: flex;
     align-items: center;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   section.mainInfo .infoCon .info2 li span {
     display: block;
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-top: 10px;
   }
   section.mainInfo .infoCon .info2 li svg {
