@@ -66,11 +66,13 @@ section.mainInfo {
     .info1 {
       font-family: "NanumSquareNeo-Variable";
       font-size: 1rem;
+      line-height: 180%;
     }
 
     .info2 {
       display: flex;
       flex-wrap: wrap;
+
       li {
         width: 50%;
         height: 80px;
@@ -89,6 +91,30 @@ section.mainInfo {
         }
         #git:hover {
           color: $ticket-red;
+        }
+      }
+
+      .link {
+        display: flex;
+        align-items: end;
+        height: 60%;
+        position: relative;
+        span {
+          margin-right: 70px;
+          display: flex;
+          align-items: end;
+          transform: translateY(-6px);
+          &:nth-child(1) {
+            font-size: 0.8rem;
+            position: absolute;
+            top: 0;
+          }
+          &:nth-child(2)::after {
+            content: "&";
+            position: absolute;
+            right: -40px;
+            top: 1px;
+          }
         }
       }
     }
@@ -313,7 +339,7 @@ section.timlineInfo {
 
 .GoTop {
   position: fixed;
-  bottom: 50px;
+  bottom: 60px;
   right: 50px;
   width: 40px;
   height: 40px;
@@ -323,7 +349,7 @@ section.timlineInfo {
   color: white;
   opacity: 0;
   transition: 1s;
-  z-index: 9;
+  z-index: 99;
   cursor: pointer;
   &:hover {
     span {
@@ -332,26 +358,88 @@ section.timlineInfo {
   }
 }
 
-section.mainInfo .infoCon .info2 .link {
-  display: flex;
-  align-items: end;
-  height: 60%;
-  position: relative;
-  span {
-    margin-right: 70px;
-    display: flex;
-    align-items: end;
-    transform: translateY(-6px);
-    &:nth-child(1) {
-      font-size: 0.8rem;
-      position: absolute;
-      top: 0;
+@media only screen and (max-width: 1200px) {
+  section.mainInfo {
+    width: 99%;
+    padding: 0 10px;
+    figure {
+      width: calc(300px + 5vw);
+      margin: 0;
+      img {
+        width: 176px;
+      }
     }
-    &:nth-child(2)::after {
-      content: "&";
-      position: absolute;
-      right: -40px;
-      top: 1px;
+
+    .infoCon {
+      padding: 60px 20px;
+
+      .info1 {
+        line-height: 180%;
+      }
+
+      .info2 {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+          width: 50%;
+          height: 80px;
+          display: flex;
+          align-items: center;
+          font-size: 0.8rem;
+          span {
+            display: block;
+            font-size: 1rem;
+            margin-top: 10px;
+          }
+          svg {
+            width: 30px;
+            height: 30px;
+            margin-right: 20px;
+          }
+          #git:hover {
+            color: $ticket-red;
+          }
+        }
+
+        .link {
+          span {
+            margin-right: 30px;
+            &:nth-child(2)::after {
+              content: "&";
+              position: absolute;
+              right: -20px;
+              top: 1px;
+            }
+          }
+        }
+      }
     }
+  }
+
+  section.skillInfo {
+    width: 98%;
+    margin: 0 auto;
+    margin-top: 50px;
+    .skillCon ul li img {
+      width: 120px;
+    }
+  }
+
+  section.prosConsInfo {
+    .prosCons {
+      width: 98%;
+      height: 500px;
+    }
+  }
+  section.timlineInfo {
+    .timlineCon {
+      width: 98%;
+    }
+  }
+
+  .GoTop {
+    bottom: 60px;
+    right: 40px;
   }
 }

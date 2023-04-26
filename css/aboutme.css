@@ -59,6 +59,7 @@ section.mainInfo .infoCon {
 section.mainInfo .infoCon .info1 {
   font-family: "NanumSquareNeo-Variable";
   font-size: 1rem;
+  line-height: 180%;
 }
 section.mainInfo .infoCon .info2 {
   display: flex;
@@ -83,6 +84,29 @@ section.mainInfo .infoCon .info2 li svg {
 }
 section.mainInfo .infoCon .info2 li #git:hover {
   color: rgb(216, 85, 96);
+}
+section.mainInfo .infoCon .info2 .link {
+  display: flex;
+  align-items: end;
+  height: 60%;
+  position: relative;
+}
+section.mainInfo .infoCon .info2 .link span {
+  margin-right: 70px;
+  display: flex;
+  align-items: end;
+  transform: translateY(-6px);
+}
+section.mainInfo .infoCon .info2 .link span:nth-child(1) {
+  font-size: 0.8rem;
+  position: absolute;
+  top: 0;
+}
+section.mainInfo .infoCon .info2 .link span:nth-child(2)::after {
+  content: "&";
+  position: absolute;
+  right: -40px;
+  top: 1px;
 }
 
 section.prosConsInfo {
@@ -311,7 +335,7 @@ section.timlineInfo .timlineCon .Tline span:nth-child(5) {
 
 .GoTop {
   position: fixed;
-  bottom: 50px;
+  bottom: 60px;
   right: 50px;
   width: 40px;
   height: 40px;
@@ -321,33 +345,81 @@ section.timlineInfo .timlineCon .Tline span:nth-child(5) {
   color: white;
   opacity: 0;
   transition: 1s;
-  z-index: 9;
+  z-index: 99;
   cursor: pointer;
 }
 .GoTop:hover span {
   transform: scale(1.05);
 }
 
-section.mainInfo .infoCon .info2 .link {
-  display: flex;
-  align-items: end;
-  height: 60%;
-  position: relative;
-}
-section.mainInfo .infoCon .info2 .link span {
-  margin-right: 70px;
-  display: flex;
-  align-items: end;
-  transform: translateY(-6px);
-}
-section.mainInfo .infoCon .info2 .link span:nth-child(1) {
-  font-size: 0.8rem;
-  position: absolute;
-  top: 0;
-}
-section.mainInfo .infoCon .info2 .link span:nth-child(2)::after {
-  content: "&";
-  position: absolute;
-  right: -40px;
-  top: 1px;
+@media only screen and (max-width: 1200px) {
+  section.mainInfo {
+    width: 99%;
+    padding: 0 10px;
+  }
+  section.mainInfo figure {
+    width: calc(300px + 5vw);
+    margin: 0;
+  }
+  section.mainInfo figure img {
+    width: 176px;
+  }
+  section.mainInfo .infoCon {
+    padding: 60px 20px;
+  }
+  section.mainInfo .infoCon .info1 {
+    line-height: 180%;
+  }
+  section.mainInfo .infoCon .info2 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section.mainInfo .infoCon .info2 li {
+    width: 50%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+  }
+  section.mainInfo .infoCon .info2 li span {
+    display: block;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  section.mainInfo .infoCon .info2 li svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+  }
+  section.mainInfo .infoCon .info2 li #git:hover {
+    color: rgb(216, 85, 96);
+  }
+  section.mainInfo .infoCon .info2 .link span {
+    margin-right: 30px;
+  }
+  section.mainInfo .infoCon .info2 .link span:nth-child(2)::after {
+    content: "&";
+    position: absolute;
+    right: -20px;
+    top: 1px;
+  }
+  section.skillInfo {
+    width: 98%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  section.skillInfo .skillCon ul li img {
+    width: 120px;
+  }
+  section.prosConsInfo .prosCons {
+    width: 98%;
+    height: 500px;
+  }
+  section.timlineInfo .timlineCon {
+    width: 98%;
+  }
+  .GoTop {
+    bottom: 60px;
+    right: 40px;
+  }
 }/*# sourceMappingURL=aboutme.css.map */

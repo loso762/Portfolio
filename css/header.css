@@ -124,4 +124,27 @@ header nav a.active::after, header nav a:hover::after {
 html,
 body {
   width: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+  @keyframes ani {
+    0% {
+      transform: scale(0.9) translateY(0px);
+    }
+    50% {
+      transform: scale(0.9) translateY(6px);
+    }
+    50% {
+      transform: scale(0.9) translateY(-2px);
+    }
+  }
+  header {
+    padding: 0;
+  }
+  header .ticket {
+    transform: scale(0.9);
+  }
+  header nav a {
+    font-size: 1.3rem;
+  }
 }/*# sourceMappingURL=header.css.map */

@@ -137,3 +137,16 @@ html,
 body {
   width: 100%;
 }
+
+@media only screen and (max-width: 1200px) {
+  header {
+    .ticket {
+      transform: scale(0.8) translateY(-50px);
+    }
+    nav {
+      a {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
