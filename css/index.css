@@ -29,16 +29,24 @@
 .mainInfo .infoCon {
   border-radius: 20px;
   max-width: 1200px;
-  height: 500px;
+  height: 650px;
   background-color: white;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   padding: 0;
+  position: relative;
+  align-items: center;
+}
+.mainInfo .infoCon h2 {
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  transform: translateX(-50%);
+  font-size: 35px;
+  margin: 0;
 }
 .mainInfo .infoCon figure {
-  width: 30%;
+  width: 35%;
   height: 100%;
   margin-right: 2vw;
   display: flex;
@@ -58,8 +66,13 @@
 .mainInfo .infoCon figure figcaption span {
   font-size: 1rem;
 }
+.mainInfo .infoCon .infoBox {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+}
 .mainInfo .infoCon .info1 {
-  line-height: 160%;
+  line-height: 180%;
   height: 40%;
   margin: 0;
   display: flex;
@@ -69,7 +82,6 @@
   display: flex;
   flex-wrap: wrap;
   height: 45%;
-  width: 50%;
   margin: 0;
   padding: 0;
 }
@@ -104,6 +116,16 @@
   display: flex;
   align-items: end;
   transform: translateY(-6px);
+  position: relative;
+}
+.mainInfo .infoCon .info2 .link span a::after {
+  content: "";
+  background-color: rgb(108, 108, 108);
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 1px;
 }
 .mainInfo .infoCon .info2 .link span:nth-child(1) {
   font-size: 0.8rem;
@@ -430,4 +452,4 @@ section.timlineInfo .timlineCon .Tline span:nth-child(5) {
     bottom: 60px;
     right: 40px;
   }
-}/*# sourceMappingURL=aboutme.css.map */
+}/*# sourceMappingURL=index.css.map */

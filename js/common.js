@@ -10,7 +10,7 @@ function head() {
     });
   });
 
-  if (window.location.pathname.includes("aboutme.html")) {
+  if (window.location.pathname.includes("index.html")) {
     const meLink = document.querySelector(".me");
     meLink.classList.add("active");
   } else if (window.location.pathname.includes("Projects.html")) {
