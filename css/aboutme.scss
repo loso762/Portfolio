@@ -26,52 +26,61 @@ $ticket-red: rgb(216, 85, 96);
   }
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-section.mainInfo {
-  max-width: 1200px;
-  margin: 200px auto 0;
-  height: 500px;
-  background-color: #ffffff;
-  border-radius: 20px;
+.mainInfo {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
   font-family: "NanumSquareNeo-Variable";
   display: flex;
-  position: relative;
-  figure {
-    width: 30%;
-    height: 100%;
-    margin-right: 2vw;
+  align-items: center;
+
+  .infoCon {
+    border-radius: 20px;
+    max-width: 1200px;
+    height: 500px;
+    background-color: white;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    img {
-      width: 70%;
-    }
-    figcaption {
-      margin-top: 20px;
-      font-size: 2rem;
-      font-weight: bold;
-      text-align: center;
-      span {
-        font-size: 1rem;
+    flex-wrap: wrap;
+    padding: 0;
+
+    figure {
+      width: 30%;
+      height: 100%;
+      margin-right: 2vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 70%;
+      }
+      figcaption {
+        margin-top: 20px;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        span {
+          font-size: 1rem;
+        }
       }
     }
-  }
-  .infoCon {
-    padding: 60px 0;
     .info1 {
-      font-family: "NanumSquareNeo-Variable";
-      font-size: 1rem;
-      line-height: 180%;
+      line-height: 160%;
+      height: 40%;
+      margin: 0;
+      display: flex;
+      align-items: center;
     }
-
     .info2 {
       display: flex;
       flex-wrap: wrap;
+      height: 45%;
+      width: 50%;
+      margin: 0;
+      padding: 0;
 
       li {
         width: 50%;
@@ -124,7 +133,7 @@ section.mainInfo {
 section.prosConsInfo {
   position: relative;
   width: 100%;
-  margin: 300px auto 0;
+  margin: 0 auto;
   height: 100vh;
   padding: calc((100vh - 400px) / 2) 0;
   background-color: #3fa4d9;
@@ -186,7 +195,6 @@ section.prosConsInfo {
 }
 
 section.skillInfo {
-  margin-top: 50px;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -194,8 +202,8 @@ section.skillInfo {
 
   .skillCon {
     max-width: 1200px;
-    margin: calc((100vh - 800px) / 2) auto;
-    height: 800px;
+    margin: calc((100vh - 760px) / 2) auto;
+    height: 760px;
     background-color: white;
     border-radius: 20px;
     display: flex;
@@ -207,7 +215,7 @@ section.skillInfo {
     h2 {
       font-size: 3.5rem;
       font-weight: 900;
-      margin: 40px 0 30px;
+      margin: 30px 0 0;
     }
     ul {
       display: flex;
@@ -232,8 +240,8 @@ section.timlineInfo {
   position: relative;
   width: 100%;
   margin: 50px auto 200px;
-  height: 110vh;
-  padding: calc((110vh - 800px) / 2) 0;
+  height: 100vh;
+  padding: calc((100vh - 800px) / 2) 0;
   background-color: #3fa4d9;
   font-family: "NanumSquareNeo-Variable";
   display: flex;
@@ -324,12 +332,13 @@ section.timlineInfo {
 }
 
 .arrow {
+  cursor: pointer;
   position: fixed;
   bottom: 5%;
   left: 50%;
   margin-left: -20px;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   transition: 0.6s;
   background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4=");
   background-size: contain;

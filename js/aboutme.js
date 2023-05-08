@@ -14,10 +14,27 @@ window.addEventListener("scroll", function () {
   });
 });
 
+let scrollPosition = 0;
+
+window.onscroll = () => {
+  scrollPosition = window.scrollY;
+};
+
 GoTop.addEventListener("click", function () {
+  scrollPosition = 0;
   window.scrollTo({
     top: 0,
     left: 0,
     behavior: "smooth",
   });
 });
+
+arrow.onclick = () => {
+  scrollPosition += window.innerHeight;
+  if (scrollPosition <= 4 * window.innerHeight) {
+    window.scrollTo({
+      top: scrollPosition,
+      behavior: "smooth",
+    });
+  }
+};
