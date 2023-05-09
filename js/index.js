@@ -6,7 +6,7 @@ window.addEventListener("scroll", function () {
   scrollY < 400 ? (GoTop.style = "opacity:0") : (GoTop.style = "opacity:1");
   scrollY > 2100 ? (arrow.style = "opacity:0") : (arrow.style = "opacity:1");
   timlineList.forEach((list, key) => {
-    if (scrollY > 2400 + key * 80) {
+    if (scrollY > 2300 + key * 80) {
       list.style = "opacity:1";
     } else {
       list.style = "opacity:0";
